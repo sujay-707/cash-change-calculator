@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #ff9800;
+  --bg: #2f4f4f;
+  --card-bg: #ffffff;
+  --text-dark: #333;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden; /* 🔑 prevents horizontal cut */
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 1.5rem auto;
+  background: var(--card-bg);
+  padding: 1.6rem 1.4rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* ================= HEADING ================= */
+.heading {
+  color: var(--primary);
+  font-size: 1.55rem;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+  word-break: break-word; /* 🔑 emoji-safe */
+}
+
+/* ================= DESCRIPTION ================= */
+.description {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 1.4rem;
+  color: var(--text-dark);
+}
+
+/* ================= LABELS ================= */
+.inputlabel {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* ================= INPUTS ================= */
+.input {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.4rem;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ================= BUTTON ================= */
+#checkbutton {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.4rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#checkbutton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ================= ERROR ================= */
+#errormessage {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: red;
+}
+
+/* ================= SECTION TITLE ================= */
+.return-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ================= CHANGE GRID ================= */
+.change-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+/* ================= CHANGE CARD ================= */
+.change-card {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 0.7rem 0.4rem;
+  opacity: 0.6;
+  transform: scale(0.96);
+  transition: all 0.25s ease;
+}
+
+.change-card span {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.change-card p {
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+
+/* ================= ACTIVE CARD ================= */
+.change-card.active {
+  opacity: 1;
+  background: #fff7e6;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.35);
+  transform: scale(1);
+}
+
+/* ================= TOTAL RETURN ================= */
+.total-return {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  border: 2px dashed var(--primary);
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.total-return span {
+  color: var(--primary);
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .change-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 900px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .change-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

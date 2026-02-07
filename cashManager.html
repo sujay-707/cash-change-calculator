@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Change Calculator</title>
+    <link rel="stylesheet" href="cashStyle.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="heading">💰 Cash Change Calculator 💸</h1>
+
+        <p class="description">
+            Enter the bill amount and the cash received to calculate the exact change and note breakdown.
+        </p>
+
+        <label class="inputlabel" for="billamount">Total Bill Amount</label>
+        <input class="input" id="billamount" type="number" min="0" inputmode="numeric" />
+
+        <label class="inputlabel" for="cashgiven">Cash Recieved from Customer</label>
+        <input class="input" id="cashgiven" type="number" min="0" inputmode="numeric" />
+
+        <button id="checkbutton" disabled>Check Return Amount</button>
+
+        <p id="errormessage" aria-live="polite"></p>
+
+        <h2 class="return-title">Return Change</h2>
+
+        <div class="change-container">
+            <div class="change-card"><span>₹2000</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹500</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹200</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹100</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹50</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹20</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹10</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹5</span>
+                <p class="noofnotes">0</p>
+            </div>
+            <div class="change-card"><span>₹1</span>
+                <p class="noofnotes">0</p>
+            </div>
+        </div>
+
+        <div class="total-return">
+            Total Return Amount: <span id="totalamount">₹0</span>
+        </div>
+    </main>
+
+    <script src="cashCalci.js"></script>
+</body>
+
+</html>
